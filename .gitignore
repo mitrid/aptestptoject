@@ -1,0 +1,8 @@
+db.sqlite3
+uploads
+aptestenv
+media
+/media
+*pyc
+.idea
+.DS_Store

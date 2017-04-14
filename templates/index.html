@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+        <div class="row">
+            <div class="col-md-12">
+            {% for post in posts %}
+               <!--  использую шаблон для создания url -->
+               <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+               <p>created at: {{ post.created_at}} </p>
+               <p>author: {{post.author}}</p>
+            {% endfor %}
+            </div>
+        </div>
+{% endblock %}

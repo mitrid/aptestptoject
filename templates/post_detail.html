@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.content|linebreaksbr }}</p>
+                {% if post.created_at %}
+               		<p><b>created at: {{ post.created_at }} </b></p>
+                {% endif %}
+                <p><b><i>author: {{post.author}}</i></b></p>
+               
+            </div>
+        </div>
+{% endblock %}
